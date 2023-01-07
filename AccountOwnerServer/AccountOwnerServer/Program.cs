@@ -3,8 +3,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AccountOwnerServer.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
+using NLog;
+using System.IO;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
 // Add services to the container.
 builder.Services.AddCors();
