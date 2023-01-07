@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Contracts;
+using Microsoft.Extensions.Logging;
+using LoggerService;
 
 namespace AccountOwnerServer.Extensions
 {
@@ -20,6 +23,11 @@ namespace AccountOwnerServer.Extensions
         {
             services.Configure<IISOptions>(options =>
             { });
+        }
+
+        public static void ConfigureLoggerService(this IServiceCollection services)
+        {
+            services.AddSingleton<ILoggerManager, LoggerManager>();
         }
     }
 }
