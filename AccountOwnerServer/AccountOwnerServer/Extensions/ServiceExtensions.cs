@@ -3,6 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Contracts;
 using Microsoft.Extensions.Logging;
 using LoggerService;
+using Microsoft.Extensions.Configuration;
+using Persistence;
+using Microsoft.EntityFrameworkCore;
+using Persistence.Contracts;
+using Persistence.Repositories;
 
 namespace AccountOwnerServer.Extensions
 {
@@ -28,6 +33,18 @@ namespace AccountOwnerServer.Extensions
         public static void ConfigureLoggerService(this IServiceCollection services)
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
+        }
+
+        public static void ConfigureOracleContext(this IServiceCollection services, IConfiguration configuration)
+        {
+            var connectionString = configuration["ConnectionString:Oracle"];
+
+            services.AddDbContextPool<RepositoryContext>(opt => opt.UseOracle(connectionString));
+        }
+
+        public static void ConfigureRepositoryWrapper (this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
     }
 }

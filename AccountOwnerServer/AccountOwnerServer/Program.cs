@@ -13,6 +13,8 @@ LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nl
 // Add services to the container.
 builder.Services.AddCors();
 builder.Services.ConfigureIISIntegration();
+builder.Services.ConfigureOracleContext(builder.Configuration);
+builder.Services.ConfigureRepositoryWrapper();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
