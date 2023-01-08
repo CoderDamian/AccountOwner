@@ -11,11 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Contracts\Contracts.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <InternalsVisibleTo Include="AccountOwnerServer"/>
+    <InternalsVisibleTo Include="AccountOwnerServer" />
   </ItemGroup>
 
 </Project>

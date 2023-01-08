@@ -31,6 +31,9 @@
             "projectReferences": {
               "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj": {
                 "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj"
+              },
+              "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -73,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj",
-        "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Fmla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fmla\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -153,11 +156,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -173,6 +172,72 @@
             "NLog": {
               "target": "Package",
               "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Fmla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Fmla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Fmla\\Documents\\MyERP\\MyPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "oracle.entityframeworkcore": {
+              "target": "Package",
+              "version": "[7.21.8, )"
             }
           },
           "imports": [
