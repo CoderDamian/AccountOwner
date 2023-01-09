@@ -35,7 +35,8 @@ namespace Persistence.Repositories
 
         public void Save()
         {
-            _repositoryContext.SaveChanges();
+            // Save changes to the database.
+            _repositoryContext.SaveChanges(); // Check if can be async.
         }
     }
 }
