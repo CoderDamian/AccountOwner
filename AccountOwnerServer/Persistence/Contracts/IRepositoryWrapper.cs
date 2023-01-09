@@ -2,10 +2,10 @@
 
 namespace Persistence.Contracts
 {
-    internal interface IRepositoryWrapper
+    public interface IRepositoryWrapper
     {
-        public AccountRepository AccountRepository { get; }
-        public OwnerRepository OwnerRepository { get; }
+        public IAccountRepository AccountRepository { get; }
+        public IOwnerRepository OwnerRepository { get; }
         void Save();
     }
 }

@@ -2,7 +2,8 @@
 
 namespace Persistence.Contracts
 {
-    internal interface IAccountRepository : IRepositoryBase<Account>
+    public interface IAccountRepository
     {
+        IEnumerable<Account> GetAllAccounts();
     }
 }

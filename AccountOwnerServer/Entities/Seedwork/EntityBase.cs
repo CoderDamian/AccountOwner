@@ -1,6 +1,6 @@
 ﻿namespace Entities.Seedwork
 {
-    internal class EntityBase
+    public class EntityBase
     {
         public string ID { get; set; } = string.Empty;
     }
