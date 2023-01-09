@@ -8,13 +8,13 @@ namespace Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Owner> builder)
         {
-            builder.ToTable("CIA", "OWNER");
+            builder.ToTable("OWNER", "CIA");
 
             builder.Property(p => p.ID)
                 .HasColumnName("OWNERID");
 
             builder.Property(p => p.Name)
-                .HasColumnName("OWNERID");
+                .HasColumnName("NAME");
 
             builder.Property(p => p.DateOfBirth)
                 .HasColumnName("DATEOFBIRTH");

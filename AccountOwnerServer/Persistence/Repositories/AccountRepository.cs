@@ -4,12 +4,18 @@ using Persistence.Seedwork;
 
 namespace Persistence.Repositories
 {
-    internal class AccountRepository : RepositoryBase<Account>, IAccountRepository
+    public class AccountRepository : RepositoryBase<Account>, IAccountRepository
     {
         public AccountRepository(RepositoryContext repositoryBase)
             : base(repositoryBase)
         {
 
+        }
+
+        public IEnumerable<Account> GetAllAccounts()
+        {
+            return FindAll()
+                .ToList();
         }
     }
 }

@@ -3,7 +3,7 @@ using NLog;
 
 namespace LoggerService
 {
-    internal class LoggerManager : ILoggerManager
+    public class LoggerManager : ILoggerManager
     {
         private static readonly ILogger _logger = LogManager.GetCurrentClassLogger();
 

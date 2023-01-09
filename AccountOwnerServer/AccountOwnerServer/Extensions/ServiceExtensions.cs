@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Contracts;
+using AutoMapper;
+using AccountOwnerServer.Mappings;
 using Microsoft.Extensions.Logging;
 using LoggerService;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +9,7 @@ using Persistence;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contracts;
 using Persistence.Repositories;
+using LoggerService.Contracts;
 
 namespace AccountOwnerServer.Extensions
 {
@@ -46,5 +48,13 @@ namespace AccountOwnerServer.Extensions
         {
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
+
+        public static void ConfigureAutoMapper(this IServiceCollection services)
+        {
+            services.AddAutoMapper(typeof(OwnerProfile));
+        }
+
+        public static void ConfigureLog(this IServiceCollection services)
+            => services.AddSingleton<ILoggerManager, LoggerManager>();
     }
 }
