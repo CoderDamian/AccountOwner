@@ -13,5 +13,3 @@ C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence
 C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence\obj\Debug\net6.0\refint\Persistence.dll
 C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence\obj\Debug\net6.0\Persistence.pdb
 C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence\obj\Debug\net6.0\ref\Persistence.dll
-C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence\bin\Debug\net6.0\Persistence.runtimeconfig.json
-C:\Users\Fmla\source\repos\Tranining\AccountOwner\AccountOwnerServer\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache

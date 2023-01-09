@@ -13,6 +13,12 @@ namespace AccountOwnerServer.Mappings
 
             CreateMap<Account, AccountDTO>()
                 .ReverseMap();
+
+            CreateMap<Owner, OwnerForCreationDto>()
+                .ReverseMap();
+
+            CreateMap<Owner, OwnerForUpdateDto>()
+                .ReverseMap();
         }
     }
 }

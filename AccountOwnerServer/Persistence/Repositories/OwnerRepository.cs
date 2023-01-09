@@ -1,5 +1,4 @@
 ﻿using Entities.Models;
-using Microsoft.EntityFrameworkCore;
 using Persistence.Contracts;
 using Persistence.Seedwork;
 
@@ -36,10 +35,24 @@ namespace Persistence.Repositories
                 throw new ArgumentNullException(nameof(ownerId));
 
             Owner? owner = FindByCondition(o => o.ID.Equals(ownerId))
-                .Include(o => o.Accounts)
                 .FirstOrDefault();
 
             return owner;
+        }
+
+        public void CreateOwner(Owner owner)
+        {
+            Create(owner);
+        }
+
+        public void UpdateOwner(Owner owner)
+        {
+            Update(owner);
+        }
+
+        public void DeleteOwner(Owner owner)
+        {
+            Delete(owner);
         }
     }
 }
