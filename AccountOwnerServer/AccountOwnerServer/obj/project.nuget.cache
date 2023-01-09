@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TxOYHf3kYdKHqalCAm0xwfp9tzwgq2trQotl8p/3i9VMne1zdjMqsYOrmFhblnh22Lxymj+uubZOhSEsYxeWBw==",
+  "dgSpecHash": "cUY0qzAzD70KhhoazGoNMnjDovbNWjfAEsS3g9K4peyA9idBjm+aFaM8u0doTEwNr0MXRdnX7Fdi3XKKTXQwjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fmla\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Fmla\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Fmla\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",

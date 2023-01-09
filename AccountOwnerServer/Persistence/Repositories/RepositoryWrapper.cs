@@ -2,7 +2,7 @@
 
 namespace Persistence.Repositories
 {
-    internal class RepositoryWrapper : IRepositoryWrapper
+    public class RepositoryWrapper : IRepositoryWrapper
     {
         private readonly RepositoryContext _repositoryContext;
         private IAccountRepository _accountRepository;

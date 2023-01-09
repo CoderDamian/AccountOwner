@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v6.0": {
       "LoggerService/1.0.0": {
         "dependencies": {
-          "Contracts": "1.0.0",
           "NLog": "5.1.1"
         },
         "runtime": {
@@ -21,11 +20,6 @@
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.1.1522"
           }
-        }
-      },
-      "Contracts/1.0.0": {
-        "runtime": {
-          "Contracts.dll": {}
         }
       }
     }
@@ -42,11 +36,6 @@
       "sha512": "sha512-YBfUDzipCaucs+8ieCDp8XECumiWsQbZwSUVLlt9i7FGV03nOPqoVzLtmlhbTxq4TN92BBsLacqPAE/ZyDDJ1g==",
       "path": "nlog/5.1.1",
       "hashPath": "nlog.5.1.1.nupkg.sha512"
-    },
-    "Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

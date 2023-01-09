@@ -2,7 +2,10 @@
 
 namespace Persistence.Contracts
 {
-    internal interface IOwnerRepository : IRepositoryBase<Owner>
+    public interface IOwnerRepository 
     {
+        IEnumerable<Owner> GetAllOwners();
+        Owner? GetOwnerById(string ownerId);
+        Owner? GetOwnerWithDetails(string ownerId);
     }
 }

@@ -8,19 +8,19 @@ namespace Persistence.Mappings
     {
         public void Configure(EntityTypeBuilder<Account> builder)
         {
-            builder.ToTable("CIA", "ACCOUNT");
+            builder.ToTable("ACCOUNT", "CIA");
 
             builder.Property(p => p.ID)
                 .HasColumnName("ACCOUNTID");
 
-            builder.Property(p => p.DateCreated)
+            builder.Property(p => p.DateCreated)    
                 .HasColumnName("DATECREATED");
 
             builder.Property(p => p.AccountType)
                 .HasColumnName("ACCOUNTTYPE");
 
             builder.Property(p => p.OwnerFK)
-                .HasColumnName("OWNERID");
+                .HasColumnName("OWNERFK");
         }
     }
 }
