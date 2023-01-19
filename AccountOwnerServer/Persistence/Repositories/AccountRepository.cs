@@ -12,7 +12,7 @@ namespace Persistence.Repositories
 
         }
 
-        public IEnumerable<Account> AccountsByOwner(string ownerId)
+        public IEnumerable<Account> GetAccountsByOwner(string ownerId)
         {
             return FindByCondition(a => a.OwnerFK.Equals(ownerId))
                 .ToList();
