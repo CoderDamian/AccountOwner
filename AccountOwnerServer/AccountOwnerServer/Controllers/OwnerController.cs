@@ -42,9 +42,7 @@ namespace AccountOwnerServer.Controllers
 
             try
             {
-                IEnumerable<Account> accounts = _repository.AccountRepository.AccountsByOwner(id);
-
-                accounts = _repository.AccountRepository.FindByCondition(p=>p.ID.Equals(id));
+                IEnumerable<Account> accounts = _repository.AccountRepository.GetAccountsByOwner(id);
 
                 if (accounts.Any())
                 {
@@ -53,7 +51,7 @@ namespace AccountOwnerServer.Controllers
                     return BadRequest("Cannot delete owner. It has related accounts. Delete those accounts first");
                 }
 
-                _repository.OwnerRepository.Delete(owner);
+                _repository.OwnerRepository.DeleteOwner(owner);
 
                 _repository.Save();
 
@@ -140,7 +138,7 @@ namespace AccountOwnerServer.Controllers
 
                 Owner newOwner = _mapper.Map<Owner>(creationDto);
 
-                _repository.OwnerRepository.Create(newOwner);
+                _repository.OwnerRepository.CreateOwner(newOwner);
 
                 _repository.Save();
 
@@ -185,7 +183,7 @@ namespace AccountOwnerServer.Controllers
                 }
                 owner = _mapper.Map<Owner>(updateDto);
 
-                _repository.OwnerRepository.Update(owner);
+                _repository.OwnerRepository.UpdateOwner(owner);
 
                 _repository.Save();
 
