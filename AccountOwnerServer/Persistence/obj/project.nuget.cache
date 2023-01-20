@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5ttNXV1FgjatzvACEECx97z4gLYLuW8beEabBMS93GMh8c9Z/BILAqsA1xDNylRtoVugLgpcyzCEj1Vj2FS6xA==",
+  "dgSpecHash": "mtnHF8f/0kX5IIF248TrB5+Hp1RzG47fCs9ZgO82tuylCF2q/jciBJbKKXFtd3Y/JxHut8al1mp6MeZxsx9q5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\Fmla\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\system.directoryservices.protocols.5.0.1.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fmla\\.nuget\\packages\\system.linq.dynamic.core\\1.2.24\\system.linq.dynamic.core.1.2.24.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
