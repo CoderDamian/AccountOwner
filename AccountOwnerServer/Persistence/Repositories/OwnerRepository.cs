@@ -60,10 +60,20 @@ namespace Persistence.Repositories
             IQueryable<Owner> owners = FindAll()
                 .Where(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth && o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
                 .OrderBy(o => o.Name);
+            
+            SearchByName(ref owners, ownerParameters.Name);
 
             return PagedList<Owner>.ToPagedList(owners,
                 ownerParameters.PageNumber,
                 ownerParameters.PageSize);
+        }
+
+        private void SearchByName(ref IQueryable<Owner> owners, string name)
+        {
+            if (!String.IsNullOrWhiteSpace(name))
+            {
+                owners.Where(o => o.Name.ToLower().Contains(name.Trim().ToLower()));
+            }
         }
     }
 }
