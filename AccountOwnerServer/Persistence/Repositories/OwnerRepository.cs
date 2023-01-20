@@ -54,5 +54,12 @@ namespace Persistence.Repositories
         {
             Delete(owner);
         }
+
+        public PagedList<Owner> GetOwners(OwnerParameters ownerParameters)
+        {
+            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(o => o.Name),
+                ownerParameters.PageNumber,
+                ownerParameters.PageSize);
+        }
     }
 }

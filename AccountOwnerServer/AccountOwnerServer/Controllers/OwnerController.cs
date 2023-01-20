@@ -66,11 +66,21 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery]OwnerParameters ownerParameter)
         {
             try
             {
-                IEnumerable<Owner> owners = _repository.OwnerRepository.GetAllOwners();
+                PagedList<Owner> owners = _repository.OwnerRepository.GetOwners(ownerParameter);
+
+                var metadata = new
+                {
+                    owners.TotalCount,
+                    owners.PageSize,
+                    owners.CurrentPage,
+                    owners.TotalPages,
+                    owners.HasNext,
+                    owners.HasPrevious
+                };
 
                 IEnumerable<OwnerDto> ownersDTO = _mapper.Map<IEnumerable<OwnerDto>>(owners);
 
