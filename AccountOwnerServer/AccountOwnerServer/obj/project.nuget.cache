@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OQm5nMCfcQTLFHdvy9inXK3nSOH8EPkgr2BUK+Uk0fFwqL4cox2CospPHqxaV/AviQbFOPFXp+rnkozgR4xDbQ==",
+  "dgSpecHash": "80/07jEHdUFo4q+CFPt3RQLA9Lko6L+Wd1dm3iTbM5YgZHThlnueS62HRKAfsOYLMiVDjfWSO5VGoWS98sxITg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fmla\\source\\repos\\Tranining\\AccountOwner\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\Fmla\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\system.directoryservices.protocols.5.0.1.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Fmla\\.nuget\\packages\\system.linq.dynamic.core\\1.2.24\\system.linq.dynamic.core.1.2.24.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\Fmla\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
