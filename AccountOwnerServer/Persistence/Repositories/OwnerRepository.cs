@@ -57,7 +57,11 @@ namespace Persistence.Repositories
 
         public PagedList<Owner> GetOwners(OwnerParameters ownerParameters)
         {
-            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(o => o.Name),
+            IQueryable<Owner> owners = FindAll()
+                .Where(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth && o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
+                .OrderBy(o => o.Name);
+
+            return PagedList<Owner>.ToPagedList(owners,
                 ownerParameters.PageNumber,
                 ownerParameters.PageSize);
         }
