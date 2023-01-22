@@ -1,7 +1,7 @@
 ﻿using Entities.Models;
 using Persistence.Contracts;
 using Persistence.Seedwork;
-using System.Drawing;
+using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
@@ -133,7 +133,7 @@ namespace Persistence.Repositories
                 return;
             }
 
-            owners = owners.OrderBy(orderQuery);
+            owners = owners.OrderBy(orderQuery); // using System.Linq.Dynamic.Core
         }
     }
 }
