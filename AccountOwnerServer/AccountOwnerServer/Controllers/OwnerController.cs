@@ -1,15 +1,14 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using Persistence.Repositories;
-using Persistence.Contracts;
-using Entities.Models;
 using AutoMapper;
-using LoggerService.Contracts;
 using Entities.DTOs;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Entities.Models;
+using LoggerService.Contracts;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
+using Persistence.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Linq.Dynamic.Core;
+using System.Linq;
 
 namespace AccountOwnerServer.Controllers
 {
@@ -20,12 +19,14 @@ namespace AccountOwnerServer.Controllers
         private readonly ILoggerManager _logger;
         private readonly IRepositoryWrapper _repository;
         private readonly IMapper _mapper;
+        private readonly LinkGenerator _linkGenerator;
 
-        public OwnerController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper)
+        public OwnerController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper, LinkGenerator linkGenerator)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             this._mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            this._linkGenerator = linkGenerator;
         }
 
         [HttpDelete("{id}")]
@@ -87,6 +88,12 @@ namespace AccountOwnerServer.Controllers
 
                 IEnumerable<OwnerDto> ownersDTO = _mapper.Map<IEnumerable<OwnerDto>>(owners);
 
+                for (var index = 0; index < owners.Count(); index++)
+                {
+                    var ownerLinks = CreateLinksForOwner(owners[index].ID);
+                    owners[index].Add("Links", ownerLinks);
+                }
+
                 _logger.LogInfo("Returning all owners from the database.");
 
                 return Ok(ownersDTO);
@@ -99,6 +106,11 @@ namespace AccountOwnerServer.Controllers
 
                 throw;
             }
+        }
+
+        private object CreateLinksForOwner(object id)
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet("{ownerID}", Name = "OwnerById")]

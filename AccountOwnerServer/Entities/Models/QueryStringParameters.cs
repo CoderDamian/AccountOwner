@@ -17,5 +17,7 @@
         }
 
         public string OrderBy { get; set; } = string.Empty;
+
+        public string Fields { get; set; } // for implement data shaping
     }
 }
